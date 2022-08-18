@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Rabanito</title>
+</head>
+
+<body>
+  
+
+    <div class="container">
+
+    </div>
+
+    <!--JS-->
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/rellax.js"></script>
+    <script>
+        $('.carousel').carousel()
+
+        var rellax = new Rellax('.rellax', {
+            center: true,
+            callback: function (position) {
+                // callback every position change
+                console.log(position);
+            },
+            breakpoints: [576, 768, 1024]
+        });
+    </script>
+
+    <script>
+        window.onload = (function () {
+            mostrarDia();
+        })();
+
+        function mostrarDia() {
+            var d = new Date();
+            var weekday = new Array(7);
+            weekday[0] = "El día más temido, Domingo: El fin del descanso";
+            weekday[1] = "¡Vamos que arranca la semana!";
+            weekday[2] = "Los martes no son el día favorito de la semana, <br> pero un día menos para el finde";
+            weekday[3] = "Miércoles con M de.. ¡Mitad de semana!";
+            weekday[4] = "Jueves, ya casi llegamos al finde";
+            weekday[5] = "¡Al fin llegó el Viernes!";
+            weekday[6] = "Es Sábado, aprovecha para apagar la compu y distenderte";
+            var n = weekday[d.getDay()];
+            document.getElementById("dia").innerHTML = n;
+        }
+    </script>
+</body>
+
+</html>
