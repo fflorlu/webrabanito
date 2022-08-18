@@ -1,0 +1,71 @@
+ /**********************
+         variables
+  **********************/
+  :root {
+    --pink: #E43C5A;
+    --blue: #3E3E63;
+    --lightblue: #6DC2C4;
+    --yellow: #E9DF67;
+    --purple: #7B61FF;
+    --white: #fff;
+    --thin: 100;
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+    --black: 900;
+  }
+
+   /**********************
+         /variables
+  **********************/
+  
+  *{
+    font-family: 'Lato', sans-serif;
+    font-weight: var(--regular);
+  }
+
+  body{
+    background-color: var(--white);
+  }
+
+  h1{
+    color: var(--pink);
+    font-size: 150px;
+  }
+
+  /**********************
+         sections
+  **********************/
+
+  #manifiesto{
+    background-color: var(--blue);
+  }
+
+  #reel{
+    background-color: var(--lightblue);
+  }
+
+  #team{
+    background-color: var(--pink);
+  }
+
+
+
+  /**********************
+         cards
+  **********************/
+
+  .card{
+    border-color: none;
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.25);
+  }
+
+  .card-title{
+    color: var(--lightblue);
+    font-weight: var(--bold);
+  }
+
+  .card-btn{
+    background-color: var(--pink);
+    color: var(--white);
+  }
